@@ -1,0 +1,53 @@
+@import "../../../styles/_colors.scss";
+
+.stat-container {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  padding: 10px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  box-sizing: border-box;
+
+  .spacer {
+    position: relative;
+    width: 100%;
+    border-top: 2px solid $white;
+  }
+
+  .category,
+  .skill {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+
+    h2 {
+      font-size: 25px;
+    }
+
+    h3 {
+      font-size: 22px;
+    }
+
+    h4 {
+      font-size: 20px;
+    }
+  }
+
+  .skill {
+    justify-content: space-between;
+    // border-bottom: 1px solid $clear-black;
+
+    .rating {
+      position: relative;
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-end;
+    }
+  }
+}

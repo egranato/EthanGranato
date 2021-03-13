@@ -1,0 +1,64 @@
+@import "../../../styles/_colors.scss";
+
+.quest-container {
+  position: relative;
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  box-sizing: border-box;
+
+  .spacer {
+    position: relative;
+    width: 100%;
+    border-top: 2px solid $white;
+  }
+
+  .category,
+  .log,
+  .points {
+    position: relative;
+    display: flex;
+    width: 100%;
+
+    h2 {
+      font-size: 25px;
+    }
+
+    h3 {
+      font-size: 22px;
+
+      i {
+        font-size: 15px;
+      }
+    }
+
+    h4 {
+      font-size: 20px;
+    }
+
+    li {
+      font-size: 20px;
+    }
+  }
+
+  .category {
+    align-items: flex-end;
+  }
+
+  .points,
+  .log {
+    flex-direction: column;
+  }
+
+  .log {
+    .title {
+      position: relative;
+      width: 90%;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}
