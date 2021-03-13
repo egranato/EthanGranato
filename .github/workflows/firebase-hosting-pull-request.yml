@@ -34,11 +34,9 @@ jobs:
         run: npm install
       - name: Build app artifact for prod
         run: npm run build --prod
-      - name: Deploy app to Firebase
-        uses: FirebaseExtended/action-hosting-deploy@v0
+      - name: Deploy angular app to Firebase
+        uses: w9jds/firebase-action@master
         with:
-          repoToken: "${{ secrets.GITHUB_TOKEN }}"
-          firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT_MY_PF_2B659 }}"
-          projectId: my-pf-2b659
+          args: deploy --only hosting
         env:
-          FIREBASE_CLI_PREVIEWS: hostingchannels
+          FIREBASE_TOKEN: ${{ secrets.firebase_token }}
