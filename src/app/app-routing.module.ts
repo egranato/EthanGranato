@@ -1,11 +1,33 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { MenuComponent } from '@components';
+import {
+  ContactComponent,
+  HomeComponent,
+  ProjectsComponent,
+  SkillsComponent,
+  WorkComponent,
+} from '@components';
 
 const routes: Routes = [
   {
     path: '',
-    component: MenuComponent,
+    component: HomeComponent,
+  },
+  {
+    path: 'skills',
+    component: SkillsComponent,
+  },
+  {
+    path: 'work',
+    component: WorkComponent,
+  },
+  {
+    path: 'projects',
+    component: ProjectsComponent,
+  },
+  {
+    path: 'contact',
+    component: ContactComponent,
   },
   {
     path: '**',

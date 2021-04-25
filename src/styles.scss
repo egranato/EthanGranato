@@ -2,13 +2,19 @@
 @import "../node_modules/reset-css/sass/_reset.scss";
 @import "./styles/_colors.scss";
 
+/* roboto-regular - latin */
 @font-face {
-  font-family: "Pixelar Regular W01 Regular";
-  src: url("/assets/fonts/pixelar.woff2") format("woff2"),
-    url("/assets/fonts/pixelar.woff") format("woff");
-  font-display: swap;
-  font-weight: 400;
+  font-family: "Roboto";
   font-style: normal;
+  font-weight: 400;
+  src: url("/assets/fonts/roboto-v27-latin-regular.eot");
+  src: local(""),
+    url("/assets/fonts/roboto-v27-latin-regular.eot?#iefix")
+      format("embedded-opentype"),
+    url("/assets/fonts/roboto-v27-latin-regular.woff2") format("woff2"),
+    url("/assets/fonts/roboto-v27-latin-regular.woff") format("woff"),
+    url("/assets/fonts/roboto-v27-latin-regular.ttf") format("truetype"),
+    url("/assets/fonts/roboto-v27-latin-regular.svg#Roboto") format("svg");
 }
 
 html,
@@ -17,23 +23,31 @@ body {
   width: 100%;
   position: fixed;
   overflow: hidden;
-  background-color: $black;
+  background-color: $light-grey;
   color: $white;
-
-  * {
-    color: $white;
-    font-family: "Pixelar Regular W01 Regular";
-    outline: none !important;
-  }
+  font-display: swap;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
 
   a {
     text-decoration: none;
   }
-}
 
-body {
-  background-image: url("/assets/images/background.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  h1 {
+    font-size: 400%;
+  }
+
+  h2 {
+    font-size: 300%;
+  }
+
+  h3 {
+    font-size: 200%;
+  }
+
+  h4 {
+    font-size: 175%;
+  }
 }

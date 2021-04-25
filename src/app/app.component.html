@@ -1,11 +1,32 @@
 <nav>
-  <div class="character">
-    <div class="portrait">
-      <img src="/assets/images/ethan.png" alt="Ethan Image" />
-    </div>
-    <h1>Ethan Granato</h1>
-  </div>
+  <a class="portrait" routerLink="">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
+      <path
+        class="logo-path"
+        d="M222.06,227.38c4-34.22,16.59-63,38-86.11q39.58-42.68,101.54-42.68,61.17,0,105.91,28.28V79.06q-40.87-19.53-101-19.54-83,0-137.13,54.88-45.15,45.79-52.58,113H68.19V104.76H212.13V65.69H25V434.31H220.36V395.24H68.19v-129H175.52q3.1,76,48.47,123.39,48.7,50.9,127.62,50.9,67.88,0,123.39-31.36V227.38ZM431.82,384.44Q400.2,401.66,357,401.66q-63,0-99.73-40Q224.4,325.95,221,266.19H431.93Z"
+      />
+    </svg>
+  </a>
+  <button class="mobile-nav" [class.open]="navOpen" (click)="toggleNav()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
 </nav>
 <main>
   <router-outlet></router-outlet>
 </main>
+<aside class="mobile-nav" [class.open]="navOpen">
+  <a routerLink="skills">
+    <p>Skills</p>
+  </a>
+  <a routerLink="work">
+    <p>Work History</p>
+  </a>
+  <a routerLink="projects">
+    <p>Projects</p>
+  </a>
+  <a routerLink="contact">
+    <p>Contact Me</p>
+  </a>
+</aside>

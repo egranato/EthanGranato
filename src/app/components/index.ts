@@ -1,3 +1,5 @@
-export * from './menu/menu.component';
-export * from './quest-log/quest-log.component';
-export * from './stats/stats.component';
+export { HomeComponent } from './home/home.component';
+export { WorkComponent } from './work/work.component';
+export { SkillsComponent } from './skills/skills.component';
+export { ProjectsComponent } from './projects/projects.component';
+export { ContactComponent } from './contact/contact.component';
