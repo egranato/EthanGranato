@@ -21,13 +21,14 @@ const routes: Routes = [
     path: 'work',
     component: WorkComponent,
   },
-  {
-    path: 'projects',
-    component: ProjectsComponent,
-  },
+  // {
+  //   path: 'projects',
+  //   component: ProjectsComponent,
+  // },
   {
     path: 'contact',
     component: ContactComponent,
+    data,
   },
   {
     path: '**',

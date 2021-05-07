@@ -1,5 +1,5 @@
 @import "../styles/_colors.scss";
-@import "../styles//_breakpoints.scss";
+@import "../styles/_breakpoints.scss";
 
 nav {
   display: flex;
@@ -72,13 +72,69 @@ nav {
       transform: rotate(-45deg);
     }
   }
+
+  .desktop-nav {
+    position: relative;
+    width: 45%;
+    height: 100%;
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+
+    a {
+      position: relative;
+      color: $white;
+      font-size: 22px;
+      padding: 10px;
+
+      p {
+        position: relative;
+        z-index: 99;
+      }
+    }
+
+    a::after,
+    a::before {
+      content: "";
+      position: absolute;
+      right: 0;
+    }
+
+    a::after {
+      top: 0;
+      height: 35px;
+      width: 0;
+      background-color: $black;
+      transition: width 0.3s ease;
+    }
+
+    a::before {
+      bottom: 0;
+      height: 0;
+      width: 100%;
+      background-color: $dark-grey;
+      transition: height 0.3s ease;
+    }
+
+    a.active,
+    a:hover,
+    a:active {
+      &::after {
+        width: 100%;
+      }
+
+      &::before {
+        height: 7px;
+      }
+    }
+  }
 }
 
 main {
   position: relative;
   height: calc(100% - 65px);
   width: 100%;
-  background-color: $white;
+  background-color: $black;
   overflow-y: auto;
   overflow-x: hidden;
 }
@@ -86,25 +142,24 @@ main {
 aside.mobile-nav {
   position: absolute;
   top: 65px;
-  right: -100%;
-  height: calc(100% - 65px);
+  right: 0;
+  height: 0;
   width: 100%;
   background-color: $white;
-  transition: right 0.3s ease;
+  transition: height 0.3s ease;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
   box-sizing: border-box;
-  padding: 10px;
+  overflow: hidden;
 
   a {
     position: relative;
-    // background-color: $light-grey;
     display: flex;
     width: auto;
     height: auto;
-    margin: 5px 0;
+    margin: 5px 20px;
     padding: 10px;
     box-sizing: border-box;
     font-size: 300%;
@@ -121,31 +176,19 @@ aside.mobile-nav {
     left: 0;
     bottom: -5px;
   }
-
-  a::before {
-    content: "";
-    position: absolute;
-    width: 5px;
-    height: 100%;
-    background-color: $light-blue;
-    left: 0;
-    bottom: 0;
-  }
 }
 
 aside.mobile-nav.open {
-  right: 0;
+  height: 205px;
 }
 
 @media #{$medium-up} {
-  aside.mobile-nav {
-    right: -375px;
-    width: 375px;
-  }
-}
-
-@media #{$large-up} {
+  nav .mobile-nav,
   aside.mobile-nav {
     display: none;
+  }
+
+  nav .desktop-nav {
+    display: flex;
   }
 }

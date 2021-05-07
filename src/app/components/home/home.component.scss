@@ -37,9 +37,11 @@
   box-sizing: border-box;
   padding: 15px;
 
-  h2 {
+  h3 {
     position: relative;
     margin-bottom: 15px;
+    width: 100%;
+    text-align: center;
   }
 
   a {
@@ -51,6 +53,12 @@
       font-size: 150%;
       margin-left: 10px;
       color: $light-grey;
+    }
+  }
+
+  a.project-link {
+    i {
+      font-size: 30px;
     }
   }
 
@@ -72,8 +80,39 @@
 .demo-section:nth-child(even) {
   background-color: $white;
   color: $black;
+
   a {
     color: $black;
+
+    i {
+      color: $black;
+    }
+  }
+
+  a.project-link i {
+    color: $dark-blue;
+  }
+}
+
+.skill-holster {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  margin: 20px 0 10px;
+
+  .skill-box {
+    position: relative;
+    height: 50px;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      height: 50px;
+    }
   }
 }
 
@@ -87,6 +126,22 @@
 
   img {
     max-width: 50%;
-    margin-bottom: 10px;
   }
+}
+
+.project-title {
+  position: relative;
+  color: $dark-blue;
+  padding-bottom: 10px;
+}
+
+.project-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60%;
+  height: 3px;
+  opacity: 0.6;
+  background-color: $dark-grey;
 }

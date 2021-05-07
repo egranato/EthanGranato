@@ -7,6 +7,20 @@
       />
     </svg>
   </a>
+  <div class="desktop-nav">
+    <a routerLink="skills" routerLinkActive="active">
+      <p>Skills</p>
+    </a>
+    <a routerLink="work" routerLinkActive="active">
+      <p>Work History</p>
+    </a>
+    <!-- <a routerLink="projects" routerLinkActive="active">
+    <p>Projects</p>
+  </a> -->
+    <a routerLink="contact" routerLinkActive="active">
+      <p>Contact</p>
+    </a>
+  </div>
   <button class="mobile-nav" [class.open]="navOpen" (click)="toggleNav()">
     <span></span>
     <span></span>
@@ -17,16 +31,16 @@
   <router-outlet></router-outlet>
 </main>
 <aside class="mobile-nav" [class.open]="navOpen">
-  <a routerLink="skills">
+  <a routerLink="skills" routerLinkActive="active">
     <p>Skills</p>
   </a>
-  <a routerLink="work">
+  <a routerLink="work" routerLinkActive="active">
     <p>Work History</p>
   </a>
-  <a routerLink="projects">
+  <!-- <a routerLink="projects" routerLinkActive="active">
     <p>Projects</p>
-  </a>
-  <a routerLink="contact">
-    <p>Contact Me</p>
+  </a> -->
+  <a routerLink="contact" routerLinkActive="active">
+    <p>Contact</p>
   </a>
 </aside>

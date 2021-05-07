@@ -1,18 +1,18 @@
 // Defining values
-$medium-range: (641px, 1024px);
-$large-range: (1025px, 1440px);
-$xlarge-range: (1441px, 1920px);
-$xxlarge-range: (1921px);
+$medium: 768px;
+$large: 992px;
+$xlarge: 1200px;
+$xxlarge: 1400px;
 
 // Defining media queries
 $screen: "only screen" !default;
 $landscape: "#{$screen} and (orientation: landscape)" !default;
 $portrait: "#{$screen} and (orientation: portrait)" !default;
-$medium-up: "#{$screen} and (min-width:#{lower-bound($medium-range)})" !default;
-$large-up: "#{$screen} and (min-width:#{lower-bound($large-range)})" !default;
-$xlarge-up: "#{$screen} and (min-width:#{lower-bound($xlarge-range)})" !default;
-$xxlarge-up: "#{$screen} and (min-width:#{lower-bound($xxlarge-range)})" !default;
-$xxlarge-up: "#{$screen} and (min-width:#{lower-bound($xxlarge-range)}))" !default;
+$medium-up: "#{$screen} and (min-width:#{$medium})" !default;
+$large-up: "#{$screen} and (min-width:#{$large})" !default;
+$xlarge-up: "#{$screen} and (min-width:#{$xlarge})" !default;
+$xxlarge-up: "#{$screen} and (min-width:#{$xxlarge})" !default;
+$xxlarge-up: "#{$screen} and (min-width:#{$xxlarge}))" !default;
 
 // Usage
 // @media #{$medium-up}    { ... }
